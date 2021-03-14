@@ -1,6 +1,9 @@
 package com.jaume.penjat;
 
 public class Tauler {
+    /**
+     * Define los datos del private
+     */
 
     private char[] paraulaSecreta;
     private String[] palabraEndevinada;
@@ -39,12 +42,22 @@ public class Tauler {
         this.totalIntents = totalIntents;
     }
 
+    /**
+     * Inicializacion del metodo constructor Tauler();
+     */
+
     public Tauler() {
         paraulaSecreta = new char[0];
         palabraEndevinada = new String[0];
         intents = 0;
         totalIntents = 0;
     }
+
+    /**
+     *  Parametros
+     * @param p nos incluira una palabra
+     * @param i nos incluira el numero de intentos que tenemos
+     */
 
     public void inicialitzarPartida(String p, int i){
         paraulaSecreta = new char[p.length()];
@@ -62,6 +75,12 @@ public class Tauler {
 
     }
 
+    /**
+     *  Metodo constructor imprimir()
+     * @return resultados
+     *
+     */
+
     public String imprimir() {
         String result = "";
         for (int i = 0; i < palabraEndevinada.length; i++) {
@@ -75,6 +94,12 @@ public class Tauler {
         }
         return result;
     }
+
+    /**
+     *  Verificacion de las letras
+     * @param letra pondra la letra introducida por el usurio
+     * @return respuesta de si la letra existe o no
+     */
 
     public String verificar(String letra) {
         if(letra.length() > 1){
@@ -94,15 +119,29 @@ public class Tauler {
         return"";
     }
 
+    /**
+     * Imprimir vidas nos da el numero de vidas que tiene el usuario en ese momento
+     * @return numero de vidas
+     */
+
     public String imprimirVides(){
         String message = String.format("Et queden %s vides de %s",intents, totalIntents);
         if(intents == 1) message = String.format("Et queda %s vida de %s",intents, totalIntents);
         return message;
     }
 
+    /**
+     * Metodo que nos sirve de las vidas los intentos
+     */
+
     public void restarIntent() {
         this.intents--;
     }
+
+    /**
+     * hasGuanyat nos da si el usuario gano o pedido
+     * @return
+     */
 
     public boolean hasGuanyat() {
         boolean valor = true;

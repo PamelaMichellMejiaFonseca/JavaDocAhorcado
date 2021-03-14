@@ -2,8 +2,17 @@ package com.jaume.penjat;
 
 import java.util.Arrays;
 import java.util.Random;
+        /**
+        * @autor Pamela Mejia Fonseca
+        *  1ro Daw
+        *  JavaDoc Ahorcado
+        * @version 05/03/2021
+        */
 
 public class Puntuacio {
+    /**
+     *
+     */
 
     private String paraula = "";
     private int dificultat = 0;
@@ -91,4 +100,6 @@ public class Puntuacio {
     }
 
 
+    public int getDificultat() {
+    }
 }
